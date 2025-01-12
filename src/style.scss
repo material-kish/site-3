@@ -30,12 +30,18 @@ $font-stack:
 $spacing-unit: 1rem;
 
 // Mixins
-// @mixin flex-center {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   text-align: center;
-// }
+@mixin centered-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+@mixin centered-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @mixin responsive($breakpoint) {
   @if $breakpoint == tablet {
@@ -82,8 +88,14 @@ h2 {
   font-weight: 300;
 }
 
+h3 {
+  font-weight: 300;
+}
+
 p {
   margin-bottom: $spacing-unit;
+  color: $olive-02;
+  font-weight: 300;
 }
 
 // Utilities
@@ -92,30 +104,76 @@ p {
 }
 
 .centered-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include centered-column();
 }
 
 .centered-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centered-row();
 }
 
 .section-heading {
   margin-bottom: 3rem;
+  margin-top: 6rem;
+  @include centered-row();
 }
 
 .gallery {
   display: grid;
+  padding: 0 4rem;
   grid-template-columns: 1fr 1fr 1fr;
   .thumbnail {
     margin: $spacing-unit;
-    height: 200px;
+    height: 250px;
     background-color: #b04b3d;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
   }
+}
+
+.project-card {
+  display: flex; /* Aligns content within the card */
+  flex-direction: row; /* Places the text and image side-by-side */
+  justify-content: space-around; /* Ensures space between text and image */
+  align-items: center; /* Vertically aligns content */
+  padding: 2*$spacing-unit;
+  border: 1px solid $japonica-01; /* Matches the soft red border */
+  margin: 2*$spacing-unit 4*$spacing-unit;
+  .project-text {
+    @include centered-column();
+    flex: 3; /* Allows text to take up available space */
+    h2 {
+      margin: 0;
+    }
+    p {
+      max-width: 70%;
+      font-size: 1rem;
+      margin-top: 5px;
+      text-align: center;
+    }
+  }
+  img {
+    flex: 2;
+    height: auto; /* Maintains aspect ratio */
+  }
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: $spacing-unit;
+  i, h3 {
+    font-size: 3rem;
+  }
+}
+
+.normal-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;  
 }
 
 .mt {
