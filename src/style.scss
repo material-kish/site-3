@@ -156,6 +156,13 @@ p {
     flex: 2;
     height: auto; /* Maintains aspect ratio */
   }
+  // hover
+  &:hover {
+    background-image: url('./media/paint_texture.png');
+    background-color: $olive-00;
+    background-blend-mode: overlay;
+    cursor: pointer;
+  }
 }
 
 /* Overlay container */
