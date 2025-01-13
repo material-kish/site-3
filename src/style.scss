@@ -81,12 +81,17 @@ h2 {
 
 h3 {
   font-weight: 300;
+  margin: 0.6rem 0;
 }
 
-p {
+p, figcaption {
   margin-bottom: $spacing-unit;
   color: $olive-02;
   font-weight: 300;
+}
+
+figcaption {
+  text-align: center;
 }
 
 // Utilities
@@ -154,10 +159,6 @@ p {
       text-align: center;
     }
   }
-  img {
-    flex: 2;
-    height: auto; /* Maintains aspect ratio */
-  }
   // hover
   &:hover {
     background-image: url("./media/paint_texture.png");
@@ -173,7 +174,7 @@ p {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background: #7e725f89; /* Semi-transparent background */
   z-index: 1000; /* Ensures it's above other content */
   align-items: center;
   justify-content: center;
@@ -185,16 +186,17 @@ p {
   background: $olive-00;
   padding: 2rem 5rem;
   overflow: auto;
-  overscroll-behavior: none;
+  overscroll-behavior: contain;
   max-width: 70%;
   max-height: 70%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  h2 {
-    font-weight: 400;
-  }
+  // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-weight: 400;
   p {
-    font-weight: 400;
     color: $olive-03;
+  }
+  figure {
+    margin: 0.9rem;
+    float: right;
   }
 }
 
@@ -214,7 +216,7 @@ p {
   border: none;
   cursor: pointer;
   i {
-    font-size: large;
+    font-size: x-large;
   }
   &:hover {
     color: $japonica-03;
