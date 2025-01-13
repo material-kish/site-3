@@ -178,6 +178,7 @@ p {
   background: $olive-00;
   padding: 2rem 5rem;
   overflow: auto;
+  overscroll-behavior: none;
   max-width: 70%;
   max-height: 70%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
