@@ -34,7 +34,7 @@ $spacing-unit: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 @mixin centered-row {
@@ -138,9 +138,9 @@ p {
   flex-direction: row; /* Places the text and image side-by-side */
   justify-content: space-around; /* Ensures space between text and image */
   align-items: center; /* Vertically aligns content */
-  padding: 2*$spacing-unit;
+  padding: 2 * $spacing-unit;
   border: 1px solid $japonica-01; /* Matches the soft red border */
-  margin: 2*$spacing-unit 4*$spacing-unit;
+  margin: 2 * $spacing-unit 4 * $spacing-unit;
   .project-text {
     @include centered-column();
     flex: 3; /* Allows text to take up available space */
@@ -163,21 +163,28 @@ p {
 .contact-detail {
   display: flex;
   align-items: center;
+  justify-content: start;
   gap: $spacing-unit;
-  i, h3 {
-    font-size: 3rem;
+  i,
+  h3 {
+    font-size: 2.4rem;
   }
 }
 
-.normal-column {
+.contact-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  // align-items: center;  
+  // align-items: center;
+  justify-self: center;
+  width: min-content;
+  // align-items: center;
 }
 
 .mt {
   margin-top: 2 * $spacing-unit;
+}
+.mt-4 {
+  margin-top: 4 * $spacing-unit;
 }
 .mb {
   margin-bottom: 2 * $spacing-unit;
@@ -210,5 +217,14 @@ p {
   font-size: 40px;
   i {
     margin: 0.8rem;
+  }
+}
+
+// pseudo-state styling
+a {
+  text-decoration: none;
+  color: $japonica-01;
+  &:hover {
+    color: $japonica-03;
   }
 }
