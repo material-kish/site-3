@@ -167,41 +167,33 @@ p {
 }
 
 /* Overlay content */
-.overlay-content {
+.overlay-panel {
   position: relative;
   background: $olive-00;
-  text-align: center;
   padding: 2rem 5rem;
+  overflow: auto;
   max-width: 70%;
   max-height: 70%;
-  overflow: auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  h2, p {
-    font-weight: 400
+  h2 {
+    font-weight: 400;
   }
   p {
+    font-weight: 400;
     color: $olive-03;
   }
 }
 
-/* Image and caption for project overlay */
-.image-and-caption {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
-
-.image-placeholder {
-  width: 200px;
-  height: 120px;
-  background: #d3d3d3; /* Placeholder color */
-}
-
 /* Close button */
-.close-overlay {
+.fixed-wrapper {
   position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
+  top: 1rem;
+  left: 1rem;
+}
+.close-overlay {
+  position: fixed;
+  // top: 1rem;
+  // left: 1rem;
   background-color: transparent;
   color: $japonica-01;
   padding: 10px 20px;
