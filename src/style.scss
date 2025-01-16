@@ -147,7 +147,7 @@ figcaption {
   justify-content: space-around; /* Ensures space between text and image */
   align-items: center; /* Vertically aligns content */
   padding: 2 * $spacing-unit;
-  border: 1px solid $japonica-01; /* Matches the soft red border */
+  border: 1px solid $japonica-00; /* Matches the soft red border */
   margin: 2 * $spacing-unit 4 * $spacing-unit;
   background-color: $olive-00; /* Fallback background color */
 
@@ -163,7 +163,7 @@ figcaption {
     background-size: cover; /* Cover the entire area */
     background-position: center; /* Center the image */
     opacity: 0; /* Start with 0 opacity */
-    transition: opacity 0.1s ease-in; /* Smooth transition for opacity */
+    transition: 0.1s ease-in; /* Smooth transition for opacity */
     z-index: 0; /* Place it behind the content */
     mix-blend-mode: luminosity;
   }
@@ -195,6 +195,8 @@ figcaption {
 
   &:hover {
     cursor: pointer;
+    border-color: $japonica-02;
+    color: $japonica-02;
   }
 }
 
