@@ -99,6 +99,14 @@ figcaption {
   text-align: center;
 }
 
+blockquote{
+  margin: 0 1rem;
+  padding: 1rem;
+  background-color: $olive-02;
+  color: $olive-00;
+  margin-bottom: 1rem;
+}
+
 // Utilities
 .text-center {
   text-align: center;
@@ -341,6 +349,11 @@ figcaption {
     object-fit: cover;
     height: 180px;
   }
+}
+
+.small-image {
+  object-fit: contain;
+  height: 180px;
 }
 
 // ID selectors
