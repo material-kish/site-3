@@ -344,16 +344,21 @@ blockquote{
   float: left;
 }
 
-.img-height-180 {
+.contain-img-height-180 {
   img {
     object-fit: cover;
     height: 180px;
   }
 }
 
-.small-image {
+.img-height-180 {
   object-fit: contain;
   height: 180px;
+}
+
+.img-height-220 {
+  object-fit: contain;
+  height: 220px;
 }
 
 // ID selectors
