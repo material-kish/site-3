@@ -287,8 +287,10 @@
               In the fall of my junior year of college, I took a course called
               Graphic Design Methodologies. One of the larger projects we were
               asked to produce was to produce a set of promotional materials for
-              a hypothetical exhibition of something from <a href="https://www.yale.edu/collections" target="_blank">the Yale Collections.</a> 
-              After some digging, I came across a collection of Chinese
+              a hypothetical exhibition of something from
+              <a href="https://www.yale.edu/collections" target="_blank"
+                >the Yale Collections.</a
+              >  After some digging, I came across a collection of Chinese
               mother-of-pearl gaming counters from the 18th and 19th centuries.
               If you’re interested in learning about the history of these
               pieces, I highly recommend reading more about it here:
@@ -308,9 +310,12 @@
               of materials I was to produce, and thinking about the hypothetical
               audience of these materials (busy college students barely glancing
               at bulletin boards), I decided on a more sensational approach.
-              When I had initially visited the <a href="https://beinecke.library.yale.edu/" target="_blank">Beinecke Library</a> to view the
-              collection and take photos, I was interested in the unique shapes
-              of many of the tokens, and in the iridescence of the
+              When I had initially visited the
+              <a href="https://beinecke.library.yale.edu/" target="_blank"
+                >Beinecke Library</a
+              >
+              to view the collection and take photos, I was interested in the
+              unique shapes of many of the tokens, and in the iridescence of the
               mother-of-pearl surface. I decided to see what I could do to
               emphasize these qualities. Iridescence is a hard thing to capture
               in a static photo, since its effect is only noticed when a surface
@@ -473,23 +478,89 @@
       <div class="section-heading">
         <h2>Programming Work</h2>
       </div>
-      <div class="project-card">
+      <div class="project-card" onclick="showOverlay('alien-egg-overlay')">
         <div class="project-text">
-          <h2>"Brain-Rock-Thing"</h2>
-          <p>This is filler text to be replaced later</p>
+          <h2>"Alien Egg" Sculpture</h2>
+          <p>
+            An interactive sculpture built with clay, ultrasonic sensors, and
+            sleep deprivation.
+          </p>
         </div>
         <img
-          src="./src/media/brain_rock_thumbnail.png"
-          alt="Brain-Rock-Thing sculpture"
+          src="./src/media/alien_egg/brain_rock_thumbnail.png"
+          alt="Alien Egg sculpture"
         />
+      </div>
+      <div id="alien-egg-overlay" class="project-overlay">
+        <div class="overlay-panel">
+          <div class="fixed-wrapper">
+            <button
+              class="close-overlay"
+              onclick="hideOverlay('alien-egg-overlay')"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <h2>"Alien Egg" Sculpture</h2>
+          <p>
+            I built this sculpture for an exhibition of artwork by Yale college
+            seniors. I had no prior experience with any of the materials I used
+            - I had never made anything with clay, and more technically
+            challenging, I had never built a physical circuit before or had any
+            experience with
+            <a href="https://en.wikipedia.org/wiki/Arduino" target="_blank"
+              >Arduinos</a
+            >.
+          </p>
+          <p>
+            I went into the project a bit unsure of what I was going to build,
+            but after a few sessions at the pottery studio, and several
+            all-nighters at the maker-space on campus, the project started to
+            take literal and conceptual shape.
+          </p>
+          <p>
+            What I ended up making was a small clay vessel, about the size of a
+            football, with many holes along the surface. I crammed a bunch of
+            LED strips inside, connected via an Arduino circuit to an ultrasonic
+            sensor.
+          </p>
+          <figure>
+            <img
+              class="img-height-420"
+              src="./src/media/alien_egg/wide_angle.jpg"
+              alt="Wide angle shot of the Alien Egg sculpture in the gallery"
+            />
+            <figcaption>The egg sitting in its enclave</figcaption>
+          </figure>
+          <p>
+            I placed the sculpture on a pedestal, tucked away under the
+            staircase in one of the showrooms of the gallery. As members of the
+            audience approached the sculpture, the ultrasonic sensor would read
+            the distance to the nearest person. This information was fed through
+            the circuit such that as people approached the sculpture, the LED
+            strips would shine brighter, and as they moved away, the lights
+            would dim.
+          </p>
+          <div class="centered-column contain-img-height-220">
+            <img
+              src="./src/media/alien_egg/close_up.jpg"
+              alt="Close-up shot of Alien Egg sculpture"
+            />
+            <video width="640" height="360" controls loop>
+              <source
+                src="./src/media/alien_egg/demonstration.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>Video of the sculpture in action</figcaption>
+          </div>
+        </div>
       </div>
       <div class="project-card">
         <div class="project-text">
           <h2>High Noon</h2>
-          <p>
-            This one was a video game or something whatever man I'm going to
-            replace this text when I make the actual site ok
-          </p>
+          <p>filler</p>
         </div>
         <img
           src="./src/media/high_noon_thumbnail.png"

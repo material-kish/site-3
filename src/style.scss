@@ -359,6 +359,13 @@ blockquote {
   }
 }
 
+.contain-img-height-220 {
+  img {
+    object-fit: cover;
+    height: 220px;
+  }
+}
+
 .img-height-180 {
   object-fit: contain;
   height: 180px;
@@ -367,6 +374,11 @@ blockquote {
 .img-height-220 {
   object-fit: contain;
   height: 220px;
+}
+
+.img-height-420 {
+  object-fit: contain;
+  height: 420px;
 }
 
 // ID selectors
