@@ -45,6 +45,13 @@ $spacing-unit: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
+  gap: 1rem;
+  img {
+    object-fit: cover;
+    flex: 1;
+    width: 0;
+  }
 }
 
 @mixin responsive($breakpoint) {
@@ -99,7 +106,7 @@ figcaption {
   text-align: center;
 }
 
-blockquote{
+blockquote {
   margin: 0 1rem;
   padding: 1rem;
   background-color: $olive-02;
