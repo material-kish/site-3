@@ -50,7 +50,6 @@ $font-stack:
   img {
     object-fit: cover;
     flex: 1;
-    width: 0;
   }
 }
 
@@ -132,6 +131,10 @@ blockquote {
   margin-bottom: 1rem;
 }
 
+video {
+  width: 100%;
+}
+
 // Utilities
 .text-center {
   text-align: center;
@@ -143,6 +146,9 @@ blockquote {
 
 .centered-row {
   @include centered-row();
+  @include responsive(tablet) {
+    flex-direction: column;
+  }
 }
 
 .section-heading {
@@ -339,6 +345,9 @@ blockquote {
 
 .two-columns {
   grid-template-columns: 1fr 1fr;
+  @include responsive(tablet) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .funky-grid-1 {
@@ -410,6 +419,9 @@ blockquote {
   img {
     object-fit: cover;
     height: 180px;
+    @include responsive(tablet) {
+      object-fit: contain;
+    }
   }
 }
 
@@ -455,6 +467,7 @@ blockquote {
 
 #contact-icons {
   font-size: 40px;
+  @include centered-row();
   i {
     margin: 0.8rem;
   }
