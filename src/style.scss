@@ -200,6 +200,15 @@ blockquote {
   margin: 2rem 4rem;
   background-color: $olive-00; /* Fallback background color */
 
+  // Mobile and Tablet styling
+  @include responsive(tablet) {
+    flex-direction: column;
+    margin: 1rem 1rem;
+    img {
+      width: 100%;
+    }
+  }
+
   // Pseudo-element for background image
   &::before {
     content: ""; /* Required for pseudo-elements */
