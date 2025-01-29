@@ -27,7 +27,6 @@ $font-stack:
   Ubuntu,
   Cantarell,
   sans-serif;
-$spacing-unit: 1rem;
 
 // Mixins
 @mixin centered-column {
@@ -56,12 +55,17 @@ $spacing-unit: 1rem;
 }
 
 @mixin responsive($breakpoint) {
-  @if $breakpoint == tablet {
-    @media (min-width: 768px) {
+  @if $breakpoint == mobile {
+    @media (max-width: 424px) {
       @content;
     }
-  } @else if $breakpoint == desktop {
-    @media (min-width: 1024px) {
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $breakpoint == laptop {
+    @media (max-width: 1023px) {
       @content;
     }
   }
@@ -72,13 +76,19 @@ html {
   font-size: 18px;
   line-height: 1.5;
   scroll-behavior: smooth;
+  @include responsive(mobile) {
+    font-size: 16px;
+  }
 }
 
 body {
   font-family: $font-stack;
   color: $japonica-01;
   background-color: $olive-00;
-  padding: 3 * $spacing-unit;
+  padding: 3rem;
+  @include responsive(mobile) {
+    padding: 1rem;
+  }
 }
 
 h1 {
@@ -99,7 +109,7 @@ h3 {
 p,
 figcaption,
 li {
-  margin-bottom: $spacing-unit;
+  margin-bottom: 1rem;
   color: $olive-02;
   font-weight: 300;
 }
@@ -140,7 +150,7 @@ blockquote {
   padding: 0 4rem;
   grid-template-columns: 1fr 1fr 1fr;
   .thumbnail {
-    margin: $spacing-unit;
+    margin: 1rem;
     height: 250px;
     background-color: #b04b3d;
     cursor: pointer;
@@ -164,9 +174,9 @@ blockquote {
   flex-direction: row; /* Places the text and image side-by-side */
   justify-content: space-around; /* Ensures space between text and image */
   align-items: center; /* Vertically aligns content */
-  padding: 2 * $spacing-unit;
+  padding: 2rem;
   border: 1px solid $japonica-00; /* Matches the soft red border */
-  margin: 2 * $spacing-unit 4 * $spacing-unit;
+  margin: 2rem 4rem;
   background-color: $olive-00; /* Fallback background color */
 
   // Pseudo-element for background image
@@ -279,7 +289,7 @@ blockquote {
 
 .grid {
   display: grid;
-  gap: $spacing-unit;
+  gap: 1rem;
   img {
     width: 100%;
     height: 100%;
@@ -311,7 +321,7 @@ blockquote {
   display: flex;
   align-items: center;
   justify-content: start;
-  gap: $spacing-unit;
+  gap: 1rem;
   i,
   h3 {
     font-size: 2.4rem;
@@ -328,22 +338,22 @@ blockquote {
 }
 
 .mt {
-  margin-top: 2 * $spacing-unit;
+  margin-top: 2rem;
 }
 .mt-4 {
-  margin-top: 4 * $spacing-unit;
+  margin-top: 4rem;
 }
 .mb {
-  margin-bottom: 2 * $spacing-unit;
+  margin-bottom: 2rem;
 }
 .mb-4 {
-  margin-bottom: 4 * $spacing-unit;
+  margin-bottom: 4rem;
 }
 .mr {
-  margin-right: 2 * $spacing-unit;
+  margin-right: 2rem;
 }
 .ml {
-  margin-left: 2 * $spacing-unit;
+  margin-left: 2rem;
 }
 
 .float-r {
@@ -384,7 +394,7 @@ blockquote {
 
 // ID selectors
 #title-block {
-  margin-bottom: $spacing-unit;
+  margin-bottom: 1rem;
   line-height: 1.15;
   h2 {
     color: $olive-02;
