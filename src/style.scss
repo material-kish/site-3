@@ -292,6 +292,15 @@ blockquote {
       width: 100%;
     }
   }
+  // Mobile and Tablet styling
+  @include responsive(tablet) {
+    max-width: 90%;
+    max-height: 90%;
+    padding: 2.2rem 1rem 1rem 1rem;
+    figure {
+      margin: 0.5rem;
+    }
+  }
 }
 
 /* Close button */
@@ -302,11 +311,12 @@ blockquote {
 }
 .close-overlay {
   position: fixed;
-  // top: 1rem;
-  // left: 1rem;
   background-color: transparent;
   color: $japonica-01;
   padding: 10px 20px;
+  @include responsive(tablet) {
+    padding: 0;
+  }
   border: none;
   cursor: pointer;
   i {
