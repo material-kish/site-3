@@ -50,6 +50,7 @@ $font-stack:
   img {
     object-fit: cover;
     flex: 1;
+    min-width: 0;
   }
 }
 
@@ -345,6 +346,9 @@ video {
 
 .two-columns {
   grid-template-columns: 1fr 1fr;
+  img {
+    height: auto;
+  }
   @include responsive(tablet) {
     grid-template-columns: 1fr;
   }
