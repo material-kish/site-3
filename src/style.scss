@@ -285,8 +285,8 @@ video {
   padding: 2rem 5rem;
   overflow: auto;
   overscroll-behavior: contain;
-  max-width: 70%;
-  max-height: 70%;
+  max-width: 80%;
+  max-height: 90%;
   // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   font-weight: 400;
   p {
@@ -417,8 +417,8 @@ video {
 
 .contain-img-height-180 {
   img {
-    object-fit: cover;
-    height: 180px;
+    object-fit: contain;
+    min-height: 180px;
     @include responsive(tablet) {
       object-fit: contain;
     }
