@@ -56,7 +56,7 @@ $font-stack:
 
 @mixin responsive($breakpoint) {
   @if $breakpoint == mobile {
-    @media (max-width: 424px) {
+    @media (max-width: 425px) {
       @content;
     }
   }
@@ -94,11 +94,17 @@ body {
 h1 {
   font-size: 3rem;
   font-weight: 400;
+  @include responsive(tablet) {
+    font-size: 2.2rem;
+  }
 }
 
 h2 {
   font-size: 2rem;
   font-weight: 300;
+  @include responsive(tablet) {
+    font-size: 1.6rem;
+  }
 }
 
 h3 {
@@ -152,7 +158,7 @@ blockquote {
   .thumbnail {
     margin: 1rem;
     height: 250px;
-    background-color: #b04b3d;
+    // background-color: #b04b3d;
     cursor: pointer;
     overflow: hidden;
     img {
@@ -163,6 +169,21 @@ blockquote {
       &:hover {
         transform: scale(1.3);
         transform-origin: 50% 50%;
+      }
+    }
+  }
+  // Mobile and Tablet styling
+  @include responsive(tablet) {
+    @include centered-column();
+    padding: 0;
+    .thumbnail {
+      height: 200px; // Change from auto to fixed height
+      width: 100%;
+      img { 
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
       }
     }
   }
@@ -398,6 +419,10 @@ blockquote {
   line-height: 1.15;
   h2 {
     color: $olive-02;
+  }
+  @include responsive(tablet) {
+    margin-top: 1rem;
+    text-align: center;
   }
 }
 
