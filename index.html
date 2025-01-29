@@ -585,15 +585,52 @@
           </div>
         </div>
       </div>
-      <div class="project-card">
+      <div class="project-card" onclick="showOverlay('high-noon-overlay')">
         <div class="project-text">
           <h2>High Noon</h2>
-          <p>filler</p>
+          <p>
+            A very simple 3D platformer I built as a way of teaching myself the
+            Unity engine.
+          </p>
         </div>
         <img
-          src="./src/media/high_noon_thumbnail.png"
-          alt="Brain-Rock-Thing sculpture"
+          src="./src/media/high_noon/high_noon_thumbnail.png"
+          alt="Screenshot from High Noon game"
         />
+      </div>
+      <div id="high-noon-overlay" class="project-overlay">
+        <div class="overlay-panel">
+          <div class="fixed-wrapper">
+            <button
+              class="close-overlay"
+              onclick="hideOverlay('high-noon-overlay')"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <h2 class="text-center mb">High Noon</h2>
+          <p>
+            A very simple 3D platformer I built as a way of teaching myself the
+            Unity engine.
+          </p>
+          <p>
+            It's available to download or play in the browser at
+            <a href="https://jacobfm.itch.io/high-noon" target="_blank"
+              >https://jacobfm.itch.io/high-noon</a
+            >
+          </p>
+          <p>
+            You can find the GitHub repo at
+            <a href="https://github.com/material-kish/high-noon" target="_blank"
+              >https://github.com/material-kish/high-noon</a
+            >
+          </p>
+          <div class="centered-column mt">
+            <img src="./src/media/high_noon/cowboy_1.jpg" alt="Screenshot from High Noon 1/3" />
+            <img src="./src/media/high_noon/cowboy_2.jpg" alt="Screenshot from High Noon 2/3" />
+            <img src="./src/media/high_noon/cowboy_3.jpg" alt="Screenshot from High Noon 3/3" />
+          </div>
+        </div>
       </div>
       <div class="project-card">
         <div class="project-text">
