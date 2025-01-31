@@ -15,7 +15,7 @@ document.querySelectorAll('.project-overlay').forEach(overlay => {
     overlay.addEventListener('click', function(event) {
         // If the click is directly on the overlay (not its children)
         if (event.target === overlay) {
-            overlay.style.display = 'none';
+            window.hideOverlay(overlay.id);
         }
     });
 });
@@ -25,8 +25,7 @@ document.addEventListener('keydown', function(event) {
         // Find all visible overlays and hide them
         document.querySelectorAll('.project-overlay').forEach(overlay => {
             if (overlay.style.display !== 'none') {
-                overlay.style.display = 'none';
-                document.body.classList.remove('overlay-active'); // Remove class when using escape key
+                window.hideOverlay(overlay.id);
             }
         });
     }
