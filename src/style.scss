@@ -272,7 +272,7 @@ video {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background: #7e725f89; /* Semi-transparent background */
   z-index: 1000; /* Ensures it's above other content */
   align-items: center;
@@ -464,7 +464,7 @@ video {
 }
 
 #main-links {
-  height: 55vh;
+  height: 55dvh;
   line-height: 2;
 }
 
