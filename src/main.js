@@ -1,11 +1,13 @@
 window.showOverlay = function(overlayId) {
     const overlay = document.getElementById(overlayId);
-    overlay.style.display = 'flex'; // Makes the overlay visible
+    overlay.style.display = 'flex';
+    document.body.classList.add('overlay-active'); // Add class when showing overlay
 };
 
 window.hideOverlay = function(overlayId) {
     const overlay = document.getElementById(overlayId);
-    overlay.style.display = 'none'; // Hides the overlay
+    overlay.style.display = 'none';
+    document.body.classList.remove('overlay-active'); // Remove class when hiding overlay
 };
 
 // Add click event listener to all overlay containers
@@ -24,6 +26,7 @@ document.addEventListener('keydown', function(event) {
         document.querySelectorAll('.project-overlay').forEach(overlay => {
             if (overlay.style.display !== 'none') {
                 overlay.style.display = 'none';
+                document.body.classList.remove('overlay-active'); // Remove class when using escape key
             }
         });
     }

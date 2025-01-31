@@ -89,6 +89,10 @@ body {
   @include responsive(mobile) {
     padding: 1rem;
   }
+  // disable scrolling when an overlay is visible
+  &.overlay-active {
+    overflow: hidden;
+  }
 }
 
 h1 {
@@ -277,6 +281,7 @@ video {
   z-index: 1000; /* Ensures it's above other content */
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 /* Overlay content */
