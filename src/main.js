@@ -22,7 +22,7 @@ document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         // Find all visible overlays and hide them
         document.querySelectorAll('.project-overlay').forEach(overlay => {
-            if (overlay.style.display === 'flex') {
+            if (overlay.style.display !== 'none') {
                 overlay.style.display = 'none';
             }
         });
