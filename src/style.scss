@@ -440,6 +440,16 @@ video {
   }
 }
 
+.contain-img-height-440 {
+  img {
+    object-fit: contain;
+    max-height: 440px;
+    @include responsive(tablet) {
+      object-fit: contain;
+    }
+  }
+}
+
 .img-height-180 {
   object-fit: contain;
   height: 180px;
