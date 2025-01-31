@@ -321,9 +321,6 @@ video {
   background-color: transparent;
   color: $japonica-01;
   padding: 10px 20px;
-  @include responsive(tablet) {
-    padding: 0;
-  }
   border: none;
   cursor: pointer;
   i {
@@ -331,6 +328,9 @@ video {
   }
   &:hover {
     color: $japonica-03;
+  }
+  @include responsive(tablet) {
+    padding: 0;
   }
 }
 
@@ -387,10 +387,9 @@ video {
 .contact-section {
   display: flex;
   flex-direction: column;
-  // align-items: center;
-  justify-self: center;
-  width: min-content;
-  // align-items: center;
+  max-width: min-content;
+  // centers the div
+  margin-inline: auto;
 }
 
 .mt {
